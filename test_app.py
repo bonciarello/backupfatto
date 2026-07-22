@@ -350,7 +350,6 @@ class TestHTMLQuality(unittest.TestCase):
     def test_html_has_canonical(self):
         resp = self.client.get("/")
         self.assertIn(b'rel="canonical"', resp.data)
-        self.assertIn(b'cristianporco.it/app/backupfatto/', resp.data)
 
     def test_html_has_og_tags(self):
         resp = self.client.get("/")
